@@ -1,6 +1,5 @@
 ﻿function parseCount(strParam) {
-	let parsedValue;
-	parsedValue = Number.parseFloat(strParam);
+	let parsedValue = Number.parseFloat(strParam);
 	if (Number.isNaN(parsedValue)) {
 		throw new Error("Невалидное значение");
 	}
@@ -41,11 +40,10 @@ function getTriangle(sideA, sideB, sideC) {
 		return new Triangle(sideA, sideB, sideC);
 	} catch (error) {
 		let message = "Ошибка! Треугольник не существует";
-		const obj = Object.freeze({
+		return Object.freeze({
 			error: error,
 			area: message,
 			perimeter: message
 		});
-		return obj;
 	}
 }
