@@ -18,11 +18,7 @@ class AlarmClock{
 
 
    removeClock (time) {
-      this.alarmCollection.forEach((alarm, index) => {
-        if (alarm.time === time) {
-            this.alarmCollection = this.alarmCollection.filter((alarm) => alarm.time != time)
-        }
-    })
+       this.alarmCollection = this.alarmCollection.filter((alarm) => alarm.time != time)
    }
    
    getCurrentFormattedTime  (){
